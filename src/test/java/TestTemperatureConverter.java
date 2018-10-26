@@ -35,6 +35,30 @@ public class TestTemperatureConverter {
     @Test
     public void testConvertKtoC() {
         double result = TemperatureConverter.convertKtoC(temperatureK);
-        Assert.assertEquals(temperatureC, result, 0.01);
+        Assert.assertEquals(temperatureC, result, 0.1);
+    }
+
+    @Test
+    public void testConvertKtoF() {
+        double result = TemperatureConverter.convertKtoF(temperatureK);
+        Assert.assertEquals(temperatureF, result, 0.1);
+    }
+
+    @Test
+    public void testConvertFtoC() {
+        double result = TemperatureConverter.convertFtoC(temperatureF);
+        Assert.assertEquals(temperatureC, result, 0.1);
+    }
+
+    @Test
+    public void testConvertFtoK() {
+        double result = TemperatureConverter.convertFtoK(temperatureF);
+        Assert.assertEquals(temperatureK, result, 0.1);
+    }
+
+    @Test
+    public void testConvertCtoF() {
+        double result = TemperatureConverter.convertCtoF(temperatureC);
+        Assert.assertEquals(temperatureF, result, 0.1);
     }
 }
